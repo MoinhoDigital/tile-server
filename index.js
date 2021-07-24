@@ -3,7 +3,9 @@ var cors = require('cors')
 
 const app = express()
 const port = process.env.PORT || 3000
-app.use(cors())
+const dir = process.env.TILE_DIR || 'assets'
 
-app.use(express.static('assets'))
+app.use(cors(dir))
+
+app.use(express.static())
 app.listen(port, () => console.log(`Map tiles being server on ${port}!`))
