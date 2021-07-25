@@ -7,5 +7,5 @@ const dir = process.env.TILE_DIR || 'assets'
 
 app.use(cors(dir))
 
-app.use(express.static())
+app.use(express.static(dir))
 app.listen(port, () => console.log(`Map tiles being server on ${port}!`))
