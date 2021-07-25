@@ -3,7 +3,7 @@ var cors = require('cors')
 
 const app = express()
 const port = process.env.PORT || 3000
-const dir = process.env.TILE_DIR || 'assets'
+const dir = process.env.TILES_DIR || 'assets'
 
 app.use(cors(dir))
 
